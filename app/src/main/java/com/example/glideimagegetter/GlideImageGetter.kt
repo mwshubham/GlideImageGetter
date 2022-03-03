@@ -85,7 +85,7 @@ class GlideImageGetter(
         override fun onResourceReady(bitmap: Bitmap, transition: Transition<in Bitmap>?) {
             val transformedBitmap = Bitmap.createBitmap(
                 bitmap.width,
-                bitmap.height + (container.get()?.paint?.fontMetricsInt?.bottom ?: 0),
+                bitmap.height + (container.get()?.paint?.fontMetricsInt?.bottom ?: 0) * 2,
                 Bitmap.Config.ARGB_8888
             )
             val canvas = Canvas(transformedBitmap)
